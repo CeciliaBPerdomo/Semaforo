@@ -15,13 +15,13 @@ const Home = () => {
 			</div>
 			
 			<div onClick={() => setSombra("yellow")} 
-			className={"cols-3 bg-warning fs-2 text-center rounded-circle" + " " 
+			className={"cols-3 bg-warning text-center rounded-circle" + " " 
 			+ (sombra === "yellow" ? "buttonshadowY" : "")}>
 				<h1>◯</h1>
 			</div>
 
 			<div onClick={() => setSombra("green")} 
-			className={"cols-3 bg-success fs-2 text-center rounded-circle" + " " 
+			className={"cols-3 bg-success text-center rounded-circle" + " " 
 			+ (sombra === "green" ? "buttonshadowG" : "")}>
 				<h1>◯</h1>
 			</div> 
