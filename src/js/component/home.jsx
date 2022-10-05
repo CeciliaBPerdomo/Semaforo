@@ -1,24 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
+	const [sombra, setSombra] = useState("");
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="d-flex flex-column mb-3" style={{margin: "50px auto", width: "75px"}}>
+			<div onClick={() => setSombra("red")} 
+				className={"cols-3 bg-danger text-center rounded-circle" + " " + 
+				(sombra === "red" ? "buttonshadowR" : "")}>
+				<h1>◯</h1>
+			</div>
+			
+			<div onClick={() => setSombra("yellow")} 
+			className={"cols-3 bg-warning fs-2 text-center rounded-circle" + " " 
+			+ (sombra === "yellow" ? "buttonshadowY" : "")}>
+				<h1>◯</h1>
+			</div>
+
+			<div onClick={() => setSombra("green")} 
+			className={"cols-3 bg-success fs-2 text-center rounded-circle" + " " 
+			+ (sombra === "green" ? "buttonshadowG" : "")}>
+				<h1>◯</h1>
+			</div> 
 		</div>
 	);
 };
